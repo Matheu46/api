@@ -1,5 +1,5 @@
-import { postService } from '../services/post-service';
-import { jwt } from '../services/jwt-service';
+import { postService } from '../services/post-service.js';
+import { jwt } from '../services/jwt-service.js';
 
 const editarPostController = {
   editar: async (token) => {

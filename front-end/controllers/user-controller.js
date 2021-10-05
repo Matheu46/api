@@ -9,8 +9,8 @@ const usuarioController = {
     return li;
   },
   users: async (list) => {
-    const token = await jwt.get();
-    const users = await userService.findAll(token);
+    // const token = await jwt.get();
+    const users = await userService.findAll(); //token dentro
     users.forEach((user) => {
       list.append(usuarioController.li(user.nome));
     });

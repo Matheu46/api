@@ -16,7 +16,7 @@ module.exports = (app) => {
 
   app.get(
     '/usuarios',
-    middlewaresAutenticacao.bearer,
+    // middlewaresAutenticacao.bearer,
     UsuarioController.findAll,
   );
   app.get('/usuarios/:id', UsuarioController.findByID);

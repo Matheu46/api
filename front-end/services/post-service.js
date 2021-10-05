@@ -24,12 +24,13 @@ export const postService = {
     return false;
   },
 
-  adicionar: async (texto, token) => {
+  adicionar: async (texto) => {
+    //adicionar token
     const response = await fetch(config.services.posts, {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + token,
+        // Authorization: 'Bearer ' + token,
       }),
       body: JSON.stringify({ texto: texto }),
     });
